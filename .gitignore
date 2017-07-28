@@ -1,0 +1,57 @@
+Jenkins/.vagrant
+Ansible/.vagrant
+Swarm/.vagrant
+Jenkins/Jenkins.box
+Ansible/ubuntu-xenial-16.04-cloudimg-console.log
+Jenkins/ubuntu-xenial-16.04-cloudimg-console.log
+Swarm/ubuntu-xenial-16.04-cloudimg-console.log
+k8-kubeadm/ubuntu-xenial-16.04-cloudimg-console.log
+
+# OS-specific
+.DS_Store
+
+# Editor swapfiles
+.*.sw?
+*~
+
+# Vagrant stuff
+acceptance_config.yml
+boxes/*
+/.vagrant
+/website/.vagrant
+/website/build
+/vagrant-spec.config.rb
+
+# Bundler/Rubygems
+*.gem
+.bundle
+pkg/*
+tags
+/Gemfile.lock
+test/tmp/
+vendor/
+/exec
+
+# Documentation
+_site/*
+.yardoc/
+doc/
+
+# Python
+*.pyc
+
+# Rubinius
+*.rbc
+
+# IDE junk
+.idea/*
+*.iml
+.project
+
+# Ruby Managers
+.rbenv
+.rbenv-gemsets
+.ruby-gemset
+.ruby-version
+.rvmrc
+

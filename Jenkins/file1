@@ -1,0 +1,11 @@
+Host default
+  HostName 172.28.128.3
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile C:/Abhijeet/vagrant/Jenkins/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+

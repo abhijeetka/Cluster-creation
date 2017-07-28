@@ -1,0 +1,23 @@
+
+Vagrant.configure("2") do |config|
+
+
+config.vm.define "Jenkins" do |jenkins|
+  jenkins.vm.box = "ubuntu/xenial64"
+  #jenkins.vm.synced_folder "./data", "/var/lib/jenkins/",type: 'nfs'
+    jenkins.vm.provider "virtualbox" do |vb|
+      jenkins.vm.network "private_network",ip:'192.168.56.5',:adapter => 2
+      jenkins.vm.hostname = 'jenkins.ci'
+      vb.name = "Jenkins"
+    end
+   jenkins.vm.provision "shell", path: "jenkins-install.sh"
+  end
+
+  config.push.define "atlas" do |push|
+    push.app = "abhijeetka/jenkins"
+    push.token = '4243wZsoj33Omw.atlasv1.8CqDvr2j0y6KSOr3ytVS78RL6xbYsekppf1t4oRUu2kNzG9cXkaIUtaRKMZcXlDegC4'
+  end
+
+  #config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "~/.ssh/me.pub"
+
+end
